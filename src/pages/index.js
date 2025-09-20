@@ -6,7 +6,7 @@ import Navbar from '@/components/navbar';
 import axios from "axios";
 
 const labels = {
-  0.5: 'Useless',
+  
   1: 'Useless+',
   1.5: 'Poor',
   2: 'Poor+',
@@ -26,7 +26,7 @@ export default function Home() {
   const [value, setValue] = React.useState(2);
   const [hover, setHover] = React.useState(-1);
   const [review, setreview] = React.useState("");
-  const [rating, setrating] = React.useState(0)
+  const [rating, setrating] = React.useState(4)
 
   const handlechange = (e) => {
     setreview(e.target.value)
