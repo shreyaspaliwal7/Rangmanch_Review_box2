@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import SplitText from './Splittext'
 
 
 const Navbar = () => {
