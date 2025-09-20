@@ -56,29 +56,6 @@ export default function Home() {
   };
 
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const res = await fetch("/api/submitReview", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify({ review, rating }),
-  //     });
-
-  //     const data = await res.json();
-
-  //     if (res.ok) {
-  //       console.log("done")
-  //       setreview("");
-  //       setrating(0);
-  //     } else {
-  //       console.log("error")
-  //     }
-  //   } catch (err) {
-  //     console.log("err")
-  //   }
-  // };
-
   return (
     <div>
       <Navbar></Navbar>
@@ -107,8 +84,8 @@ export default function Home() {
               setHover(newHover);
             }}
             // Increase star size here
-            icon={<StarIcon sx={{ fontSize: 70 }} />}   // ⭐ Custom large size
-            emptyIcon={<StarIcon sx={{ fontSize: 70, opacity: 0.55 }} />}
+            icon={<StarIcon sx={{ fontSize: 50 }} />}   // ⭐ Custom large size
+            emptyIcon={<StarIcon sx={{ fontSize: 50, opacity: 0.55 }} />}
           />
           {value !== null && (
             <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
@@ -117,7 +94,7 @@ export default function Home() {
       </div>
       <div className='mt-5 flex justify-center items-center flex-col' >
         {/* <input type="text" className='w-1/2 h-40 p-5 mb-10 rounded-2xl border-2 overflow-x-scroll' placeholder='Enter Your Review' /> */}
-        <textarea value={review} id="review" onChange={handlechange} className='w-1/2 p-5 mb-3 rounded-2xl border-2 ' name="review" rows="8" cols="60" placeholder="Tell us about your experience"></textarea>
+        <textarea value={review} id="review" onChange={handlechange} className='w-4/5 p-5 mb-3 rounded-2xl border-2 ' name="review" rows="8" cols="60" placeholder="Tell us about your experience"></textarea>
         <button onClick={handleSubmit} className='cursor-pointer bg-blue-400 pl-10 pr-10 pt-3 pb-3 rounded-2xl mb-5 ' >Submit Review</button>
       </div>
     </div>
